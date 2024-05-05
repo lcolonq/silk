@@ -43,7 +43,7 @@ SRCS = \
   main-gcu.c \
   main-x11.c maid-x11.c \
   main-gtk.c \
-  main.c
+  main-emacs.c
 
 OBJS = \
   z-util.o z-virt.o z-form.o z-rand.o z-term.o \
@@ -60,7 +60,7 @@ OBJS = \
   main-gcu.o \
   main-x11.o maid-x11.o \
   main-gtk.o \
-  main.o
+  main-emacs.o
 
 
 
@@ -112,8 +112,8 @@ CC = gcc
 ##
 ## Standard -- "main-x11.c" & "main-gcu.c"
 ##
-CFLAGS = -Wall -O1 -pipe -g -D"USE_X11" -D"USE_GCU"
-LIBS = -lX11 -lncurses
+CFLAGS = -Wall -O1 -pipe -g -D"USE_EMACS"
+LIBS =
 
 
 ##
@@ -314,7 +314,7 @@ main-cap.o: main-cap.c $(INCS) main.h
 main-gcu.o: main-gcu.c $(INCS) main.h
 main-gtk.o: main-gtk.c $(INCS) main.h maid-x11.h
 main-x11.o: main-x11.c $(INCS) main.h maid-x11.h
-main.o: main.c $(INCS) main.h
+main-emacs.o: main-emacs.c $(INCS) main.h
 melee1.o: melee1.c $(INCS)
 melee2.o: melee2.c $(INCS)
 monster1.o: monster1.c $(INCS)

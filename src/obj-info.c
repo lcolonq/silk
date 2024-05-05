@@ -972,8 +972,10 @@ void note_info_screen(const object_type* o_ptr)
     text_out_wrap = 0;
     text_out_indent = 0;
 
+	printf("(note-item \"%s\")\n", k_text + k_info[o_ptr->k_idx].text);
+
     /* Wait for input */
-    (void)inkey();
+    // (void)inkey();
 
     /* Load the screen */
     screen_load();

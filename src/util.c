@@ -2097,6 +2097,8 @@ char inkey(void)
  */
 void bell(cptr reason)
 {
+	printf("(bell \"%s\")\n", reason);
+
     /* Mega-Hack -- Flush the output */
     Term_fresh();
 
@@ -3845,6 +3847,8 @@ int get_menu_choice(s16b max, char* prompt)
 
     bool done = FALSE;
 
+	printf("(prompt-choice \"%s\")\n", prompt);
+
     prt(prompt, 0, 0);
 
     while (!done)
@@ -3906,6 +3910,8 @@ int get_menu_choice(s16b max, char* prompt)
 bool get_com(cptr prompt, char* command)
 {
     char ch;
+
+	printf("(prompt \"%s\")\n", prompt);
 
     /* Paranoia XXX XXX XXX */
     message_flush();

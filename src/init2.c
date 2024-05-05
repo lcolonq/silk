@@ -1520,6 +1520,7 @@ static errr init_alloc(void)
  */
 static void note(cptr str)
 {
+	printf("(note \"%s\")\n", str);
     Term_erase(0, 23, 255);
     Term_putstr(20, 23, -1, TERM_SLATE, str);
     Term_fresh();
